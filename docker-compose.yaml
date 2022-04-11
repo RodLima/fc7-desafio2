@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: fc7-desafio2
+    build: .
+    command: "sh -c 'npm install && npm run start:dev'"
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
